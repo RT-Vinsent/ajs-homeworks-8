@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 import Team from './modules/team';
 import ErrorRepository from './modules/errorrepository';
+import Settings from './modules/settings';
 
 const alex = {
   name: 'ALex',
@@ -39,9 +40,14 @@ team.add(dima);
 team.toArray();
 
 console.log(team.membersArr);
-team.members.forEach((size) => console.log(size));
 
 const error = new ErrorRepository();
 
 console.log(error.translate(1001));
 console.log(error.translate(1002));
+
+const setting = new Settings();
+setting.settings = ['theme', 'gray'];
+setting.settings = ['music', 'rock'];
+
+console.log(setting.settings);
