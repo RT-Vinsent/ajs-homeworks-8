@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 import Team from './modules/team';
+import ErrorRepository from './modules/errorrepository';
 
 const alex = {
   name: 'ALex',
@@ -39,3 +40,8 @@ team.toArray();
 
 console.log(team.membersArr);
 team.members.forEach((size) => console.log(size));
+
+const error = new ErrorRepository();
+
+console.log(error.translate(1001));
+console.log(error.translate(1002));
